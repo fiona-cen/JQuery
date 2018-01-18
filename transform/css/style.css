@@ -1,0 +1,51 @@
+@charset "utf-8";
+body,div,ul,li,h2,a{
+	border:0;
+	padding: 0
+}
+.mainContainer ul li{
+	list-style: none;
+	float: left;
+	width: 250px;
+	height: 172px;
+	border:30px solid #fff;
+	margin-left: -60px;	
+}
+
+.mainContainer{
+	width: 1000px;
+	/* height: 500px; */
+	overflow: hidden;
+	border:1px solid black;
+	margin: 0 auto;
+	position: relative;
+}
+.mainContainer h2{
+	position: absolute;
+	right: 50px;
+	bottom: 280px;
+	background: rgba(255,255,255,0.5);
+	letter-spacing: 0.5em;
+	padding: 5px 20px;
+}
+.mainContainer .btn a{
+	position: absolute;
+	color: #fff;
+	padding: 10px;
+	font-size: 60px;
+}
+.mainContainer .btn a:hover{
+	opacity: 0.5;
+}
+.mainContainer .btn .btnLeft{
+	left: 50px;
+	top: 80px;
+}
+.mainContainer .btn .btnRight{
+	right: 50px;
+	top: 80px;
+}.mainContainer .btn .btnPlay{
+	position: absolute;
+	left:50px;
+	top: 20px;
+}

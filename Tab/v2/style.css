@@ -1,0 +1,18 @@
+*{margin:0;padding:0;}
+.tab-wrap{
+	background-color: #bad;
+	margin:20px auto;
+	width: 400px;
+}
+.tab-nav{
+	height: 40px;
+}
+.tab-nav li{
+	float: left;
+	line-height: 40px;
+	width:90px;
+	border:1px solid #cad;
+	border-radius: 5px 5px 0 0;
+
+}
+.tab-nav li a{text-decoration: none;}

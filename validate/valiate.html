@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="jquery-1.10.0.js"></script>
+		<script src="jquery.validate-1.13.1.js"></script>
+	</head>
+	<body>
+		<form id="loginForm" style="width:200px">
+			<fieldset>
+				<legend>登录界面</legend>
+				<p>
+					<label for="username">用户名</label>
+					<input type="text" id="username" name="username" class="txt"/>
+				</p>
+				<p>
+					<label for="password">密码</label>
+					<input type="password" id="password" name="password">
+				</p>
+				<p>
+					<label for="confirm-password">确认密码</label>
+					<input type="password" id="confirm-password" name="confirm-password">
+				</p>
+				<p>
+					<input type="button" id="btn1" value="确认">
+				</p>
+			</fieldset>
+		</form>
+		<script type="text/javascript">
+		var validator;
+			$(function(){
+				validator=$("#loginForm").validate({
+					rules:{
+						username:{
+							required:true,
+							minlength:2,
+							maxlength:10
+						},
+						password:{
+							required:true,
+							rangelength:[6,12],
+							number:true
+						},
+						"confirm-password":{// 因为变量名字有横杆，所以必须加上引号引起来
+							equalTo:"#password"
+						}
+					},
+					messages:{
+						username:{
+							required:"此处不能为空",
+							minlength:"长度不能小于2"
+						},
+						password:{
+							required:"密码不能为空",
+							number:"密码必须是数字",
+							rangelength:"密码长度需在6-12位数字之间"
+						},
+						"confirm-password":{
+							equalTo:"此次密码与上次输入密码不同！请重新输入"
+						}
+					}
+				});
+			})
+			$("#btn1").click(function(){//valid()方法 检查表单或者某些元素是否有效
+				alert($("#loginForm").valid()?"填写正确":"重新填写");
+			});
+
+			//rules方法主要针对表单元素，非表单本身
+			$("#username").rules();
+			$("#username").rules("remove","required minlength");
+			$("#username").rules("add",{required:true,minlength:2,email:true});
+
+			//validate方法返回validator对象
+			//validator.form（）验证表单是否有效 返回值true、false
+			//validator.element(element)验证元素是否有效 返回值true、false
+			//validator.resetForm()把表单恢复奥验证前原来的状态
+			//validator.showErrors(errors)针对某个元素显示特定的错误信息
+			//validator.numberOfInavalids()返回无效的元素数量
+
+			$.validator.addClassRules({
+				txt:{
+					required:true,
+					email:true
+				}
+			});
+		</script>
+	</body>
+</html>

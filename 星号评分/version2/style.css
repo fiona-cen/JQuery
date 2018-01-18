@@ -1,0 +1,17 @@
+body,ul,li{
+	padding: 0;
+	margin:0;
+}
+ul,li{
+	list-style: none;
+}
+.rating{
+	width: 150px;
+}
+.rating-item{
+	float: left;
+	width: 30px;
+	height: 30px;
+	background:url(http://i.niupic.com/images/2017/05/31/iVPGGC.png) no-repeat;
+	cursor: pointer;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fullpage website</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+	<script type="text/javascript" src="../jquery-1.10.0.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+</head>
+<body>
+
+
+	<div id="fullpage">
+		<div class="section">Some section</div>
+		<div class="section">Some section</div>
+		<div class="section">Some section</div>
+		<div class="section">
+			<div class="slide"> Slide 1 </div>
+			<div class="slide"> Slide 2 </div>
+			<div class="slide"> Slide 3 </div>
+			<div class="slide"> Slide 4 </div>
+		</div>
+		<div class="section">Some section</div>
+	</div>
+	<script type="text/javascript">
+		$('#fullpage').fullpage({
+			sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#abc']		});
+	</script>
+</body>
+</html>
